@@ -1,18 +1,22 @@
 package com.commercetools.importer;
 
+import com.commercetools.importer.product.Product;
 import com.commercetools.importer.product.ProductsQueryService;
-import com.commercetools.importer.product.impl.ProductsQueryServiceImpl;
-import com.commercetools.importer.product.impl.Product;
 
+import java.util.ServiceLoader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 class Main {
 
     public static void main(String[] args) {
-        ProductsQueryService service = new ProductsQueryServiceImpl();
-        Product product = service.getProductByKey("testKey");
-        Logger logger = Logger.getGlobal();
-        logger.log(Level.INFO, product.getName());
+        ServiceLoader<ProductsQueryService> serviceLoader = ServiceLoader.load(ProductsQueryService.class);
+        serviceLoader.forEach(productsQueryService -> {
+            Product product = productsQueryService.getProductByKey("testKey");
+            Logger logger = Logger.getGlobal();
+            logger.log(Level.INFO, product.getName());
+        });
+
+
     }
 }

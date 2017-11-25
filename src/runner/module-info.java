@@ -1,4 +1,6 @@
 module com.commercetools.importer {
     requires java.logging;
-    requires com.commercetools.importer.product;
+    requires product.api;
+
+    uses com.commercetools.importer.product.ProductsQueryService;
 }

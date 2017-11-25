@@ -1,4 +1,4 @@
-package com.commercetools.importer.product.impl;
+package com.commercetools.importer.product;
 
 public class Product {
 
