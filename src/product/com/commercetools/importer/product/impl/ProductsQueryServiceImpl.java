@@ -1,6 +1,6 @@
-package com.commercetools.importer.product;
+package com.commercetools.importer.product.impl;
 
-import com.commercetools.importer.product.impl.Product;
+import com.commercetools.importer.product.ProductsQueryService;
 
 /**
  * TODO: add class description
