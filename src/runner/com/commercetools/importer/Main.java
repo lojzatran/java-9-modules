@@ -1,6 +1,6 @@
 package com.commercetools.importer;
 
-import com.commercetools.importer.product.Product;
+import com.commercetools.importer.domains.Product;
 import com.commercetools.importer.product.ProductsQueryService;
 
 import java.util.ServiceLoader;
