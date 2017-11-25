@@ -1,4 +1,4 @@
-package com.commercetools.importer.product.impl;
+package com.commercetools.importer.product.projections.impl;
 
 import com.commercetools.importer.product.Product;
 import com.commercetools.importer.product.ProductsQueryService;

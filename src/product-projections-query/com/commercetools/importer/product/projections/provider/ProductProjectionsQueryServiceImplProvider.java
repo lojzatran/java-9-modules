@@ -1,6 +1,6 @@
-package com.commercetools.importer.product.provider;
+package com.commercetools.importer.product.projections.provider;
 
-import com.commercetools.importer.product.impl.ProductProjectionsQueryServiceImpl;
+import com.commercetools.importer.product.projections.impl.ProductProjectionsQueryServiceImpl;
 
 /**
  * TODO: add class description
