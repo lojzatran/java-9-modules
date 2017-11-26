@@ -9,4 +9,4 @@
 
 /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/javac -classpath lib/jackson-core-2.9.0.jar -d out/production/runner -p out/production/product-api:out/production/domain:src/runner:mods src/runner/module-info.java src/runner/com/commercetools/importer/Main.java src/runner/com/commercetools/importer/utils/ConfigurationUtils.java src/runner/com/commercetools/importer/utils/ProjectConfiguration.java src/runner/com/commercetools/importer/utils/TenantConfiguration.java
 
-/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java -classpath lib/jackson-core-2.9.0.jar -p out/production/runner:out/production/product-api:out/production/domain:mods/jackson-databind-2.9.0.jar:mods/jackson-annotations-2.9.0.jar -m com.commercetools.importer/com.commercetools.importer.Main
+/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home/bin/java -classpath lib/jackson-core-2.9.0.jar -p out/production/runner:out/production/product-api:out/production/domain:mods --add-opens com.commercetools.importer/com.commercetools.importer.utils=jackson.databind -m com.commercetools.importer/com.commercetools.importer.Main
